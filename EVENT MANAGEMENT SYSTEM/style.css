@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff9800;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+
+/* Home */
+
+.hero {
+    height: 500px;
+
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+
+/* Common Section */
+
+section {
+    padding: 60px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+
+/* Search */
+
+#searchBox {
+    display: block;
+
+    width: 60%;
+
+    margin: 0 auto 40px;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+
+/* Events */
+
+.event-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.event-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+.event-card h3 {
+    margin: 15px 0;
+}
+
+.event-card p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.event-image {
+    font-size: 60px;
+}
+
+.event-card button {
+    background-color: #ff9800;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+.event-card button:hover {
+    background-color: #e68900;
+}
+
+
+/* About */
+
+.about {
+    background-color: white;
+
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+
+/* Registration */
+
+#register {
+    background-color: #f1f2f6;
+}
+
+form {
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #ff9800;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.reset-btn {
+    background-color: #555;
+    margin-left: 10px;
+}
+
+#successMessage {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: green;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* Contact */
+
+.contact {
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+    }
+
+    #searchBox {
+        width: 100%;
+    }
+}
